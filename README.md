@@ -20,22 +20,22 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-TODO
-[/] check username/email for uniques
-[X] limit title length
-[X] limit description length
-[] Make error message for invalid length
-[] create admin panel to approve/reject submissions
-[] redo home that shows top builds in each category
-[/] figure how to keep top builds 'fresh'
-[] limit builds/day or max builds
-[] Pagination
-[/] vanguard images
-[X] all vanguard weapons
-[X] basic censoring
-[X] Whats new section (Home)
-[X] Beta message!
-[] Update Voting/Favoriting System
+    TODO
+    [/] check username/email for uniques
+    [X] limit title length
+    [X] limit description length
+    [] Make error message for invalid length
+    [] create admin panel to approve/reject submissions
+    [] redo home that shows top builds in each category
+    [/] figure how to keep top builds 'fresh'
+    [] limit builds/day or max builds
+    [] Pagination
+    [/] vanguard images
+    [X] all vanguard weapons
+    [X] basic censoring
+    [X] Whats new section (Home)
+    [X] Beta message!
+    [] Update Voting/Favoriting System
 
 Ranking System...
 
