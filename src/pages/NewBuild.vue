@@ -7,7 +7,7 @@
 			<div class="ui grid container">
 				<div
 					class="eight wide column field right label"
-					:class="{ error: buildTitle == '' || buildTitle.length > 50 }"
+					:class="{ error: buildTitle == '' || buildTitle.length > titleLimit }"
 				>
 					<label>Title</label>
 					<input type="text" v-model.trim="buildTitle" />
@@ -15,7 +15,7 @@
 				</div>
 				<div
 					class="eight wide column field right label"
-					:class="{ error: buildBody == '' || buildBody.length > 130 }"
+					:class="{ error: buildBody == '' || buildBody.length > bodyLimit }"
 				>
 					<label>Short Description</label>
 					<input type="text" v-model.trim="buildBody" />

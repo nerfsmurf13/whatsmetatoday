@@ -3,11 +3,14 @@
 		<div class="ui fluid card">
 			<div class="content">
 				<div class="right floated meta">{{ timeConvert(build.timestamp) }}</div>
-				<div class="header">{{ build.title }} ({{build.id}})</div>
+				<div class="header">{{ build.title }}</div>
 				<!-- <div class="header">{{ build.title }} {{ build.id }}</div> -->
 			</div>
 			<div class="image custom-dark">
-				<img class="tiktok-fx" :src="require(`../assets/image_${build.weapon}.png`)"  />
+				<img
+					class="tiktok-fx"
+					:src="require(`../assets/image_${build.weapon}.png`)"
+				/>
 			</div>
 			<div class="content">
 				<div class="meta">
@@ -15,8 +18,9 @@
 				</div>
 				<div class="description">
 					<div v-for="(value, key) in build.attachments">
-								{{ key }}: {{ value }}
-							</div/>
+						{{ key }}: {{ value }}
+					</div>
+
 					<!-- {{ build.attachments }} -->
 				</div>
 			</div>
@@ -34,7 +38,8 @@
 				| -->
 				<span>
 					<!-- <i class="star outline icon" @click="favorite(build.id)"></i> -->
-					<i v-show="!faved" class="star outline icon" @click="favorite()"></i><i v-show="faved" class="star icon" @click="favorite()"></i>
+					<i v-show="!faved" class="star outline icon" @click="favorite()"></i
+					><i v-show="faved" class="star icon" @click="favorite()"></i>
 					{{ favs }}
 				</span>
 			</div>
