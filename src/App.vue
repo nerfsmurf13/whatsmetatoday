@@ -8,7 +8,7 @@
 				</router-link>
 				<div class="right menu">
 					<li v-if="isLoggedIn" class="item">
-						{{ groupedProps.username }} | {{ currentUser }}
+						{{ currentUsername }} | {{ currentUser }}
 					</li>
 					<router-link v-if="!isLoggedIn" to="/register" class="item">
 						<i class="edit layout icon"></i> Register
@@ -45,15 +45,23 @@ export default {
 			currentUser: false,
 			currentUsername: false,
 			groupedProps: { username: '', favorites: [], uid: '' },
-			username: false,
+			uid: '',
+			username: '',
 			favorites: [],
 		};
 	},
 	created() {
 		if (firebase.auth().currentUser) {
 			this.isLoggedIn = true;
+			this.user = firebase.auth().currentUser;
 			this.currentUser = firebase.auth().currentUser.email;
-			this.groupedProps.uid = this.currentUser;
+			this.uid = this.user.uid;
+			this.currentUsername = this.user.displayName;
+			this.groupedProps.username = this.user.displayName;
+			// this.groupedProps.username = this.user.displayName;
+			this.groupedProps.uid = this.user.uid;
+			this.log(this.currentUsername);
+			this.log(this.user);
 		}
 		// this.$root.$emit('eventing', data);
 	},
